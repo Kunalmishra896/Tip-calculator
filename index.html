@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div class="inner">
+      <form>
+        <div class="form">
+          <label for="Bill">Bill</label>
+          <div class="input_forms">
+            <span class="icons">
+              <img src="./images/icon-dollar.svg" alt="dollar" />
+            </span>
+            <input type="text" name="Bill" id="Bill" placeholder="0" />
+          </div>
+        </div>
+
+        <div class="form">
+          <label for="Select_tip">Select Tip</label>
+          <div class="tip_butt">
+            <label class="tip">
+              <input type="radio" name="tip" id="select-tip" value="5" />
+              <span class="amount">5%</span>
+            </label>
+            <label class="tip">
+              <input type="radio" name="tip" id="select-tip" value="5" />
+              <span class="amount">10%</span>
+            </label>
+            <label class="tip">
+              <input type="radio" name="tip" id="select-tip" value="5" />
+              <span class="amount">15%</span>
+            </label>
+            <label class="tip">
+              <input type="radio" name="tip" id="select-tip" value="5" />
+              <span class="amount">20%</span>
+            </label>
+            <label class="tip">
+              <input type="radio" name="tip" id="select-tip" value="5" />
+              <span class="amount">25%</span>
+            </label>
+            <label class="tip custom_butt">
+              <input
+                type="number"
+                min="0"
+                max="100"
+                name="custom_butt"
+                id="input_custom_butt"
+                placeholder="Custom"
+              />
+            </label>
+          </div>
+        </div>
+
+        <div class="form">
+          <label for="Number_of_people">Number of People</label>
+          <div class="input_forms">
+            <span class="icons">
+              <img src="./images/icon-person.svg" alt="dollar" />
+            </span>
+            <input
+              type="number"
+              name="Number_of_people"
+              id="Number_of_people"
+              placeholder="0"
+              min="0"
+              max="10"
+            />
+            <small class="invalid-feedback"></small>
+          </div>
+        </div>
+      </form>
+
+      <div class="reset_box">
+        <div class="tip_amount">
+          <p class="tip_text">
+            Tip Amount
+            <br />
+            <span class="per_person">/ person</span>
+          </p>
+          <span class="amount" id="person_tip_amount">$0</span>
+        </div>
+        <div class="tip_amount">
+          <p class="tip_text">
+            Total
+            <br />
+            <span class="per_person">/ person</span>
+          </p>
+          <span class="amount" id="total">$0</span>
+        </div>
+        <button type="reset" id="reset">RESET</button>
+      </div>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
